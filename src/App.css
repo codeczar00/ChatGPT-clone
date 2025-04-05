@@ -1,38 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+html{
+    font-size: 62.5%;
+}
+body {
+    background-color: rgb(3, 0, 31);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
 .App {
-  text-align: center;
+    min-height: 100vh;
+    display: flex;
+}
+.sideBar {
+    flex: 3;
+    border-right: 1px solid rgb(100, 100, 100);
+}
+.main {
+    flex: 9;
+}
+.logo {
+    margin-right: 1rem;
+}
+.brand {
+    font-size: 2rem;
+}
+.upperSide {
+    padding: 2.5rem;
+    border-bottom: 1px solid rgb(100, 100, 100);
+    height: 70%;
+}
+.upperSideTop {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+.addBtn {
+    height: 2rem;
+    padding-right: 1rem;
+}
+.midBtn {
+    background: #5A4BFF;
+    color: white;
+    border: none;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25rem;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.query {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    padding: 1.5rem;
+    width: 25rem;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(222, 222, 222, 1);
+}
+.query > img {
+    object-fit: cover;
+    margin-right: 2rem;
+}
+.lowerSide {
+    padding: 1rem;
+}
+.listItems {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem;
+    font-size: 1.3rem;
+}
+.listItemsImg {
+    padding-right: 1rem;
+    margin: 1rem;
+}
+.lowerSide :nth-child(2) img{
+    margin-right: 1.2rem;
+}
+.lowerSide :nth-child(2) {
+    margin-left: 0.7rem;
+}
+.main {
+    min-height: calc(100vh - 14rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 6rem 10rem;
+    margin-bottom: 0rem;
+}
+.chatsfooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+}
+.input {
+    padding: 0.5rem;
+    background-color: rgba(28, 30, 58, 1);
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    width: 68rem;
+}
+.input > input {
+    width: calc(100% - 3rem);
+    outline: none;
+    padding: 1.25rem;
+    color: white;
+}
+.input > input , .send {
+    background: transparent;
+    border: none;
+}
+.chatsfooter > p {
+    padding-top: 1.5rem;
+}
+.chats {
+    overflow: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    width: 100%;
+    width: 70rem;
+    height: auto;
+    scrollbar-width: none;
+    text-align: justify;
+}
+.chat {
+    margin: 1rem;
+    margin-left: 1.5rem;
+    padding: 2rem -1rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: flex-start;
+}
+.chatbot {
+    background: rgb(28, 30, 58, 1);
+    width: fit-content;
+    border-radius: 0.8rem;
+    margin: 1rem;
+    padding: 2rem 2rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: flex-start;
+}
+.chatimg {
+    object-fit: cover;
+    width: 3.5rem;
+    margin-right: 2rem;
+    border-radius: 0.5rem;
+}
+.send {
+    cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
+
+
+
+
+
+

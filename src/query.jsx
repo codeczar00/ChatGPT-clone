@@ -1,4 +1,3 @@
-import React from "react";
 import msgIcon from './assets/message.svg'
 
 function Query({queryText}) {

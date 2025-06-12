@@ -1,9 +1,17 @@
-const { GoogleGenerativeAI } = require("@google/generative-ai");
-
-const genAI = new GoogleGenerativeAI(process.env.REACT_APP_GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
 export const sendMsg = async (prompt) => {
-    const result = await model.generateContent(prompt);
-    return result.response.text(); 
-}
+  try {
+    const res = await fetch(`${backendUrl}/api/generate`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ prompt }),
+    });
+
+    const data = await res.json();
+    return data.text;
+  } catch (error) {
+    console.error("Error calling backend:", error);
+    return "Something went wrong!";
+  }
+};
